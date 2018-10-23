@@ -19,11 +19,10 @@
 }
 
 #declare Face = intersection{
-    object{ FaceOutside   pigment{color GreenDark } }
-    object{ FaceInside }
-    object{ Pyramid }
-    object{ InversePrism }
-    pigment{color GreenLight }
+    object{ FaceOutside   pigment{color GreenDark}  }
+    object{ FaceInside    pigment{color GreenLight} }
+    object{ Pyramid       pigment{color GreenLight} }
+    object{ InversePrism  pigment{color GreenLight} }
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
