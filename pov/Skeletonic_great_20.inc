@@ -1,6 +1,21 @@
 #declare I6Norm = vnormalize(I[6]);
 #declare D12Norm = vnormalize(D[12]);
 
+#declare Pyritohedral = false;
+#if (Pyritohedral)
+    #declare Dark1  = GrayDark;
+    #declare Light1 = GrayLight;
+    #declare Dark2  = YellowDark;
+    #declare Light2 = YellowLight;
+#else
+    #declare Dark1  = GreenDark;
+    #declare Light1 = GreenLight;
+    #declare Dark2  = GreenDark;
+    #declare Light2 = GreenLight;
+#end
+
+////////////////////////////////////////////////////////////////////////////////////////
+
 #declare FaceOutside = plane{ PlaneNormDistFromPoints(I[0], I[9], I[8]) }
 #declare FaceInside  = plane{ PlaneNormDistFromPoints(I[0], I[8], I[9]) +OffsetFace }
 
@@ -19,10 +34,18 @@
 }
 
 #declare Face = intersection{
-    object{ FaceOutside   pigment{color GreenDark}  }
-    object{ FaceInside    pigment{color GreenLight} }
-    object{ Pyramid       pigment{color GreenLight} }
-    object{ InversePrism  pigment{color GreenLight} }
+    object{ FaceOutside   pigment{color Dark1}  }
+    object{ FaceInside    pigment{color Light1} }
+    object{ Pyramid       pigment{color Light1} }
+    object{ InversePrism  pigment{color Light1} }
+}
+
+#declare Face2 = intersection{
+    object{ FaceOutside   pigment{color Dark2}  }
+    object{ FaceInside    pigment{color Light2} }
+    object{ Pyramid       pigment{color Light2} }
+    object{ InversePrism  pigment{color Light2} }
+    RotMatFromVectorAndAngle(I6Norm, 2*pi/5)
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -42,11 +65,6 @@
     object{ FacesX }
     object{ FacesY }
     object{ FacesZ }
-}
-
-#declare Face2 = object{
-    Face
-    RotMatFromVectorAndAngle(I6Norm, 2*pi/5)
 }
 
 #declare Faces2 = union{

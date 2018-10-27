@@ -1,2 +1,2 @@
 #declare VioletDark = VioletLight;
-#declare VioletLight = AlmostWhite;
+#declare VioletLight = GrayLight;

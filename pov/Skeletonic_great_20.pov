@@ -1,6 +1,13 @@
 #include "basics.inc"
 
-#declare IScale = PairScale * (sqrt(5)+1)/2;
+// hull sized if true
+#declare Big = true;
+
+#if (Big)
+    #declare IScale = 1;
+#else
+    #declare IScale = PairScale * (sqrt(5)+1)/2;
+#end
 #include "coordinates.inc"
 #include "Skeletonic_great_20.inc"
 

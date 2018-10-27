@@ -61,7 +61,18 @@ sky_sphere{ pigment{ White } }
 #declare VioletDark = rgb <82,9,37>/255;
 #declare VioletLight = rgb <148,84,109>/255;
 
-#declare AlmostWhite = rgb .7;
+#declare BlueDark = rgb <12,13,104>/255;
+#declare BlueLight = rgb <87,88,167>/255;
+
+#declare RedDark  = srgb <205,35,0>/255;
+#declare RedLight = srgb <240,189,178>/255;
+
+#declare YellowDark  = srgb <253,196,19>/255;
+#declare YellowLight = srgb <254,225,137>/255;
+
+#declare GrayDark = rgb .2;
+#declare GrayLight = rgb .7;
+
 #declare Transparent = rgbt<1,1,1,.5>;  // .5 for ball-and-stick, .25 for skeletonic
 
 
