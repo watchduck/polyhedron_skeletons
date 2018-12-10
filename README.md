@@ -86,5 +86,5 @@ The `View` variable comes from `VARIABLES.inc`,<br> which is created before each
 [`app.py`](https://github.com/watchduck/polyhedron_skeletons/blob/master/app.py)
 (compare [`variables.tpl`](https://github.com/watchduck/polyhedron_skeletons/blob/master/views/variables.tpl)).
 
-The POV-Ray macros in [`pov_macros`](https://github.com/watchduck/polyhedron_skeletons/tree/master/pov_macros)
+Most of the POV-Ray macros in [`pov_macros`](https://github.com/watchduck/polyhedron_skeletons/tree/master/pov_macros)
 are described [here](https://github.com/watchduck/convex_polyhedra/tree/master/povray_includes).
